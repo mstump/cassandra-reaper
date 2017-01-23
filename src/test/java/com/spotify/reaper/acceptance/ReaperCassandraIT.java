@@ -71,7 +71,6 @@ public class ReaperCassandraIT {
       String[] queries = cql.split(";");
       for(String query:queries){
         if(!query.startsWith("--") && query.length()>10){
-          LOG.info("query : {}", query.trim());
           session.execute(query);
         }
       }
